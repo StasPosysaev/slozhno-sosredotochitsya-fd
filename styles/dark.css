@@ -18,8 +18,28 @@
   --section-title-color: #FF0070;
 }
 
- .theme-dark .header__rec {
+.theme-dark .header__rec {
   display: inline;
+}
+
+  @media (prefers-color-scheme: dark) {
+    :root.theme-dark {
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --text-color: #F1B2CE;
+  --accent-color: #FF0070;
+  --title-color: #DB00FF;
+  --decor-color: #FF0070;
+  --shadow-color: #FF0070;
+  --menu-color: #FF0070;
+  --title-text-color: #000028;
+  --link-color: #DB00FF;
+  --section-title-color: #FF0070;
+  }
+
+  .header__rec {
+    display: inline;
+  }
 }
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
