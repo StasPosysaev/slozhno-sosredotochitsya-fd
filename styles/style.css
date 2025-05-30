@@ -370,9 +370,14 @@ a:focus {
     grid-row: 4;
   }
 
+  /* .footer {
+    margin-block-start: 260px;
+  } */
+
   .footer__title {
     max-inline-size: 360px;
     inline-size: 100%;
+    margin-block-start: 160px;
   }
 }
 
@@ -395,7 +400,7 @@ a:focus {
   }
 
   .header__theme-menu-item {
-    margin-inline-start: 14px;
+    margin-inline-start: 15px;
   }
 
   .header__theme-menu-list {
@@ -427,16 +432,14 @@ a:focus {
     margin-block-start: 60px;
   }
 
-  .img__section {
-    margin-block-end: ;
-  }
-
   .footer {
-    margin-block-start: 350px;
+    margin-block-start: 348px;
   }
 
   .footer__title {
     max-inline-size: 471px;
     inline-size: 100%;
+    padding-block-end: 360px;
+    margin-block-start: 360px;
   }
 }
