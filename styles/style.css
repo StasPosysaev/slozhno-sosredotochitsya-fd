@@ -22,7 +22,7 @@
   top: 10px;
   right: 20px;
   font-size: var(--text-font-size);
-  color: var(--accent-color);
+  color: var(--rec-color);
   font-family: var(--font-family);
   text-transform: uppercase;
 }
@@ -33,7 +33,7 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border: 1px solid var(--decor-color);
+  border: 1px solid var(--menu-color);
 }
 
 .decorated-zone::before {
@@ -58,7 +58,7 @@
   margin-left: 10px;
   border-radius: 50%;
   background-color: var(--decor-color);
-  box-shadow: 0 0 4px 2px var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--rec-color);
 }
 
 .header__theme-menu {
@@ -66,8 +66,8 @@
   justify-content: center;
   align-items: end;
   flex-direction: column;
-  margin-inline-end: 18px;
-  margin-block-start: 75px;
+  margin-inline-end: 16px;
+  margin-block-start: 70px;
   margin-block-end: 65px;
 }
 
@@ -82,6 +82,14 @@
 
 .header__theme-menu-button {
   transition: all 0.3s ease;
+  /* line-height: 1; */
+  appearance: none;
+  /* padding-block: 5px; */
+}
+
+.header__title,
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 
 .header__title {
@@ -89,7 +97,6 @@
 }
 
 .accent {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--shadow-color);
   line-height: 83%;
@@ -184,10 +191,9 @@
 }
 
 .footer__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   max-inline-size: 348px;
   inline-size: 100%;
-  text-shadow: 2px 2px 0 var(--shadow-color);
+  text-shadow: 2px 2px 0 var(--footer-shadow-color);
 }
 
 .header__theme-menu-button:hover {
@@ -209,8 +215,9 @@ a:focus {
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--focus-color);
+  outline: 1px solid var(--focus-color);
   pointer-events: none;
+  padding-inline: 7px;
 }
 
 @media (width >= 768px) {
@@ -318,7 +325,7 @@ a:focus {
 
   .img__section {
     padding-block-start: 30px;
-    margin-block-end: 80px;
+    margin-block-end: 60px;
   }
 
   .img__section .text__title-xl {
@@ -328,10 +335,8 @@ a:focus {
   .img__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: min-content 1fr 1fr 1.5fr;
+    /* grid-template-rows: min-content 1fr 1fr 1.5fr; */
     gap: var(--gap-grid);
-    max-block-size: 780px;
-    block-size: 100%;
   }
 
   .img__container img {
@@ -377,7 +382,6 @@ a:focus {
   .footer__title {
     max-inline-size: 360px;
     inline-size: 100%;
-    margin-block-start: 160px;
   }
 }
 
@@ -388,8 +392,7 @@ a:focus {
 
   .header__title,
   .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    /* !Уважаемый ревьюер Никита, вы мне оставили пометку что такой размер шрифта нужно указывать от ширины 768px, но указать ширину именно так было сказано в задании, это не моё решение. (Для планшета и десктопа). */
+    font-size: clamp(9.8125rem, 9.0268rem + 1.2277vw, 10.5rem);
   }
 
   .header__theme-menu {
@@ -397,14 +400,17 @@ a:focus {
     align-items: center;
     margin-block-start: 20px;
     margin-block-end: 0px;
+    margin-inline: 0px;
   }
 
   .header__theme-menu-item {
-    margin-inline-start: 15px;
+    margin-inline: 0px;
+    padding-inline: 0px;
   }
 
   .header__theme-menu-list {
     flex-direction: row;
+    gap: 25px;
   }
 
   .header__text {
@@ -430,10 +436,6 @@ a:focus {
   .section-advices {
     grid-template-columns: 1fr 2.06fr;
     margin-block-start: 60px;
-  }
-
-  .footer {
-    margin-block-start: 348px;
   }
 
   .footer__title {

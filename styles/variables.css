@@ -1,4 +1,4 @@
-:root{
+:root {
   --text-font-size: 18px;
   --title-font-size: 116px;
   --font-family: 'IBM Plex Mono', sans-serif;
@@ -10,17 +10,14 @@
   --bg-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;
   --text-color: #F1B2CE;
-  --accent-color: #FF0070;
   --title-color: #DB00FF;
   --decor-color: #FF0070;
   --shadow-color: #FF0070;
   --menu-color: #FF0070;
   --title-text-color: #000028;
-  --link-color: #DB00FF;
   --section-title-color: #FF0070;
   --hover-color: #FF007066;
   --focus-color: #FF0070;
   --link-shadow-color: #FF0070;
-  --link-text-color: #F1B2CE;
 }
 
